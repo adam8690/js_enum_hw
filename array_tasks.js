@@ -34,9 +34,17 @@ var arrayTasks = {
 		return total;
 	},
 
-	// findDuplicates: function (arr) {
-		
-	// },
+	findDuplicates: function (arr) {
+		var newArray = [];
+		var sameCount = 1;
+		// checks element in front and behind. if element behind is the same and the next element is not equal then add the item to the array as it must be the last one in the ordered array.
+		for (var i = 1; i < arr.length; i++){
+			if(arr[i - 1] === arr[i] && arr[i] !== arr[i + 1]){
+				newArray.push(arr[i]);
+			}
+		}
+		return newArray;
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 		
