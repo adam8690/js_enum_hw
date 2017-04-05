@@ -1,15 +1,21 @@
 var arrayTasks = {
 
 	concat: function (arr1, arr2) {
-		for(i = 0; i < arr2.length; i++){
+		for(var i = 0; i < arr2.length; i++){
 		arr1.push(arr2[i]);
 		}
 		return arr1;
 	},
 
-	// insertAt: function (arr, itemToAdd, index) {
-		
-	// },
+	insertAt: function (arr, itemToAdd, index) {
+		arr.push(itemToAdd);
+		for(var i = arr.length - 1; i > index; i--){
+			var temp = arr[i-1];
+			arr[i-1] = arr[i];
+			arr[i] = temp;
+			}
+			return arr;
+		},
 
 	// square: function (arr) {
 		
