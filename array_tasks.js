@@ -66,9 +66,15 @@ var arrayTasks = {
 		return newArray;
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-		
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var sumSquared = 0;
+		for (i = 0; i < arr.length; i++){
+			if(arr[i] % 2 === 0){
+				sumSquared = sumSquared + (arr[i] * arr[i]);
+			}
+		}
+		return sumSquared;
+	}
 
 }
 
